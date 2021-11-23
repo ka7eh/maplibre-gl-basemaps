@@ -1,0 +1,43 @@
+.maplibregl-ctrl-basemaps {
+  display: flex;
+  flex-direction: row;
+  pointer-events: auto;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+
+  &.column {
+    flex-direction: column;
+
+    &.reverse {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .basemap {
+    width: 64px;
+    height: 64px;
+    margin: 2px;
+    border: 2px solid #ccc;
+    border-radius: 40px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+
+    &.active {
+      border-color: orange;
+      box-shadow: 2px 2px 4px #000
+    }
+  }
+
+  &.closed {
+    .basemap {
+      display: none;
+
+      &.active {
+        display: block;
+        border: 2px solid #ccc;
+      }
+    }
+  }
+}
