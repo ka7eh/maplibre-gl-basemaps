@@ -12,6 +12,7 @@ A Maplibre GL Control for switching between basemaps.
 
 ```{js}
 import BasemapsControl from 'maplibre-gl-basemaps';
+import 'maplibre-gl-basemaps/lib/basemaps.css';
 
 map.addControl(new BasemapsControl(options));
 ```

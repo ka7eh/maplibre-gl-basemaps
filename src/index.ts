@@ -1,6 +1,6 @@
-import maplibre from "maplibre-gl";
+import maplibre, { IControl } from "maplibre-gl";
 
-interface Options {
+export interface MapLibreBasemapsControlOptions {
     basemaps: Array<{
         id: string;
         tiles: string[];
@@ -11,12 +11,12 @@ interface Options {
     expandDirection?: "top" | "down" | "left" | "right";
 }
 
-export default class BasemapsControl {
-    _options: Options;
+export default class BasemapsControl implements IControl {
+    _options: MapLibreBasemapsControlOptions;
 
     _container: HTMLElement;
 
-    constructor(options: Options) {
+    constructor(options: MapLibreBasemapsControlOptions) {
         this._options = options;
 
         this._container = document.createElement("div");

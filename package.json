@@ -1,6 +1,6 @@
 {
   "name": "maplibre-gl-basemaps",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./lib/index.js",
   "description": "Basemaps Control for MapLibre GL",
   "author": "Kaveh Karimi <ka7eh@pm.me>",
