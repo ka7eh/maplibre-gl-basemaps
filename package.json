@@ -8,6 +8,7 @@
   "repository": "https://github.com/ka7eh/maplibre-gl-basemaps",
   "keywords": [
     "maplibre-gl",
+    "mapbox-gl",
     "basemaps"
   ],
   "license": "ISC",
