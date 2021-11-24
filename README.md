@@ -4,7 +4,9 @@
 
 A Maplibre GL Control for switching between basemaps.
 
-> This should work with Mapbox GL too. See `examples/index.mapboxgl.html`. You need to add a Mapbox access token to run this example.
+[Demo](https://ka7eh.github.io/maplibre-gl-basemaps/example)
+
+> This should work with Mapbox GL too. See `example.mapboxgl.html`. You need to add a Mapbox access token to run this example.
 
 ## Usage
 
@@ -16,7 +18,7 @@ map.addControl(new BasemapsControl(options));
 
 To run the examples locally, install the dependencies and run `npm run examples`.
 
-Go to `localhost:8080` for Maplibre GL example and `localhost:8080/index.mapbox.html` for Mapbox GL example.
+Go to `localhost:8080` for Maplibre GL example and `localhost:8080/example.mapbox.html` for Mapbox GL example.
 
 ## Options
 
