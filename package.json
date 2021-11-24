@@ -40,5 +40,8 @@
   },
   "peerDependencies": {
     "maplibre-gl": "<2"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
