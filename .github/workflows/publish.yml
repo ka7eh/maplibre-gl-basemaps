@@ -15,6 +15,9 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm i
       - run: npm run build
+      - run: |
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/ka7eh/maplibre-gl-basemaps.git
+        npx gh-pages -u "github-actions-bot <support+actions@github.com>" -s '{README.md,example.html,lib/*}' -d .
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
