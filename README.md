@@ -1,8 +1,8 @@
 # MapLibre GL Basemaps Control
 
-> The core interactions and stying of this control is based on [Leaflet.Basemaps](https://github.com/consbio/Leaflet.Basemaps)
+> The core interactions and styling of this control is based on [Leaflet.Basemaps](https://github.com/consbio/Leaflet.Basemaps)
 
-A Maplibre GL Control for switching between basemaps.
+A Maplibre GL Control for switching between basemaps. The control only supports raster sources.
 
 [Demo](https://ka7eh.github.io/maplibre-gl-basemaps/example)
 
@@ -12,6 +12,7 @@ A Maplibre GL Control for switching between basemaps.
 
 ```{js}
 import BasemapsControl from 'maplibre-gl-basemaps';
+import 'maplibre-gl-basemaps/lib/basemaps.css';
 
 map.addControl(new BasemapsControl(options));
 ```
