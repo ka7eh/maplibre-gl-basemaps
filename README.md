@@ -1,6 +1,6 @@
 # MapLibre GL Basemaps Control
 
-> The core interactions and stying of this control is based on [Leaflet.Basemaps](https://github.com/consbio/Leaflet.Basemaps)
+> The core interactions and styling of this control is based on [Leaflet.Basemaps](https://github.com/consbio/Leaflet.Basemaps)
 
 A Maplibre GL Control for switching between basemaps. The control only supports raster sources.
 

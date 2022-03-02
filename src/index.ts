@@ -1,11 +1,11 @@
-import maplibre, { IControl } from "maplibre-gl";
+import { IControl } from "maplibre-gl";
 
 export interface MapLibreBasemapsControlOptions {
     basemaps: Array<{
         id: string;
         tiles: string[];
-        sourceExtraParams?: Partial<maplibre.RasterSource>;
-        layerExtraParams?: Partial<maplibre.RasterLayer>;
+        sourceExtraParams?: Partial<maplibregl.RasterSourceSpecification>;
+        layerExtraParams?: Partial<maplibregl.RasterLayerSpecification>;
     }>;
     initialBasemap: string; // id of the initial basemap
     expandDirection?: "top" | "down" | "left" | "right";
@@ -43,7 +43,7 @@ export default class BasemapsControl implements IControl {
         });
     }
 
-    onAdd(map: maplibre.Map): HTMLElement {
+    onAdd(map: maplibregl.Map): HTMLElement {
         map.on("load", () => {
             this._options.basemaps.forEach(({ id, tiles, sourceExtraParams = {}, layerExtraParams = {} }) => {
                 map.addSource(id, {
