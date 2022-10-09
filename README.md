@@ -7,6 +7,14 @@ A Maplibre GL Control for switching between basemaps. The control only supports 
 [Demo](https://ka7eh.github.io/maplibre-gl-basemaps/example)
 
 > This should work with Mapbox GL too. See `example.mapboxgl.html`. You need to add a Mapbox access token to run this example.
+## Install
+``
+npm install maplibre-gl-basemaps
+``
+
+``
+yarn add maplibre-gl-basemaps
+``
 
 ## Usage
 
