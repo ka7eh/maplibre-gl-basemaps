@@ -6,7 +6,7 @@ A MapLibre GL JS Control for switching between basemaps. The control only suppor
 
 [Demo](https://ka7eh.github.io/maplibre-gl-basemaps/example)
 
-> This should work with Mapbox GL too. See `example.mapboxgl.html`. You need to add a Mapbox access token to run this example.
+> This should work with Mapbox GL JS too. See `example.mapboxgl.html`. You need to add a Mapbox access token to run this example.
 
 ## Usage
 
@@ -19,7 +19,7 @@ map.addControl(new BasemapsControl(options));
 
 To run the examples locally, install the dependencies and run `npm run examples`.
 
-Go to `localhost:8080` for MapLibre GL JS example and `localhost:8080/example.mapbox.html` for Mapbox GL example.
+Go to `localhost:8080` for MapLibre GL JS example and `localhost:8080/example.mapbox.html` for Mapbox GL JS example.
 
 ## Options
 
@@ -36,6 +36,6 @@ Go to `localhost:8080` for MapLibre GL JS example and `localhost:8080/example.ma
 | Attribute         | Description                                                                                                                                         |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | id                | The string to use for both the basemap source and layer                                                                                             |
-| tiles             | An array of one or more tile source URLs, as in the TileJSON spec (https://maplibre.org/maplibre-gl-js-docs/style-spec/sources/#raster-tiles)       |
-| sourceExtraParams | Other parameters accepted by MapLibre GL raster source to pass to the basemap (https://maplibre.org/maplibre-gl-js-docs/style-spec/sources/#raster) |
-| layerExtraParams  | Other parameters accepted by MapLibre GL raster layer to pass to the basemap (https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#raster)   |
+| tiles             | An array of one or more tile source URLs, as in the TileJSON spec (https://maplibre.org/maplibre-style-spec/sources/#raster-tiles)       |
+| sourceExtraParams | Other parameters accepted by MapLibre raster source to pass to the basemap (https://maplibre.org/maplibre-style-spec/sources/#raster) |
+| layerExtraParams  | Other parameters accepted by MapLibre raster layer to pass to the basemap (https://maplibre.org/maplibre-style-spec/layers/#raster)   |
