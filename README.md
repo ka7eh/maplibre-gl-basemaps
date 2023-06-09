@@ -1,8 +1,8 @@
-# MapLibre GL Basemaps Control
+# MapLibre GL JS Basemaps Control
 
 > The core interactions and styling of this control is based on [Leaflet.Basemaps](https://github.com/consbio/Leaflet.Basemaps)
 
-A Maplibre GL Control for switching between basemaps. The control only supports raster sources.
+A MapLibre GL JS Control for switching between basemaps. The control only supports raster sources.
 
 [Demo](https://ka7eh.github.io/maplibre-gl-basemaps/example)
 
@@ -19,7 +19,7 @@ map.addControl(new BasemapsControl(options));
 
 To run the examples locally, install the dependencies and run `npm run examples`.
 
-Go to `localhost:8080` for Maplibre GL example and `localhost:8080/example.mapbox.html` for Mapbox GL example.
+Go to `localhost:8080` for MapLibre GL JS example and `localhost:8080/example.mapbox.html` for Mapbox GL example.
 
 ## Options
 
