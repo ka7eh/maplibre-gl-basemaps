@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,14 +8,16 @@
   <title>MapLibre GL Basemaps Control</title>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-  <link href="https://unpkg.com/maplibre-gl@2.1.6/dist/maplibre-gl.css" rel="stylesheet" />
-  <script src="https://unpkg.com/maplibre-gl@2.1.6/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@5.0.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@5.0.1/dist/maplibre-gl.js"></script>
 
   <link href="lib/basemaps.css" rel="stylesheet">
   <script src="lib/index.js"></script>
 
   <style>
-    html, body, #Map {
+    html,
+    body,
+    #Map {
       height: 100%;
       width: 100%;
       padding: 0;
@@ -22,7 +25,7 @@
     }
   </style>
   <script>
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
       const map = new maplibregl.Map({
         container: "Map",
         attributionControl: false,
@@ -38,32 +41,29 @@
           {
             basemaps: [
               {
-                id: "basemap_World_Topo_Map",
-                tiles: ["//server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}"],
+                id: "ortoEsri",
+                tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
                 sourceExtraParams: {
                   tileSize: 256,
-                  attribution: "Sources: Esri, HERE, Garmin, Intermap, increment P Corp., GEBCO, USGS, FAO, NPS, NRCAN, GeoBase, IGN, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), (c) OpenStreetMap contributors, and the GIS User Community",
+                  attribution: "ESRI &copy; <a href='http://www.esri.com'>ESRI</a>",
                   minzoom: 0,
                   maxzoom: 22
                 }
               },
               {
-                id: "stamen",
+                id: "OpenStreetMap",
                 tiles: [
-                  "//stamen-tiles-a.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
-                  "//stamen-tiles-b.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
-                  "//stamen-tiles-c.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
-                  "//stamen-tiles-d.a.ssl.fastly.net/toner/{z}/{x}/{y}.png"
+                  'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
                 ],
                 sourceExtraParams: {
                   tileSize: 256,
-                  attribution: "Map tiles by <a href='http://stamen.com'>Stamen Design</a>, <a href='http://creativecommons.org/licenses/by/3.0'>CC BY 3.0</a> &mdash; Map data &copy; <a href='http://openstreetmap.org'>OpenStreetMap</a> contributors, <a href='http://creativecommons.org/licenses/by-sa/2.0/''>CC-BY-SA</a>",
+                  attribution: "&copy; OpenStreetMap Contributors",
                   minzoom: 0,
                   maxzoom: 20
                 }
               }
             ],
-            initialBasemap: "stamen",
+            initialBasemap: "OpenStreetMap",
             expandDirection: "top"
           }),
         "bottom-left"
@@ -71,8 +71,10 @@
     });
   </script>
 </head>
+
 <body>
 
-<div id="Map"></div>
+  <div id="Map"></div>
 </body>
+
 </html>

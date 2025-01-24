@@ -6,7 +6,11 @@ A Maplibre GL Control for switching between basemaps. The control only supports 
 
 [Demo](https://ka7eh.github.io/maplibre-gl-basemaps/example)
 
-> This should work with Mapbox GL too. See `example.mapboxgl.html`. You need to add a Mapbox access token to run this example.
+## Installation
+
+```bash
+npm install maplibre-gl-basemaps
+```
 
 ## Usage
 
@@ -18,8 +22,7 @@ map.addControl(new BasemapsControl(options));
 ```
 
 To run the examples locally, install the dependencies and run `npm run examples`.
-
-Go to `localhost:8080` for Maplibre GL example and `localhost:8080/example.mapbox.html` for Mapbox GL example.
+Access the examples at `localhost:8080`.
 
 ## Options
 
@@ -33,9 +36,9 @@ Go to `localhost:8080` for Maplibre GL example and `localhost:8080/example.mapbo
 
 #### Basemap object
 
-| Attribute         | Description                                                                                                                                         |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| id                | The string to use for both the basemap source and layer                                                                                             |
-| tiles             | An array of one or more tile source URLs, as in the TileJSON spec (https://maplibre.org/maplibre-gl-js-docs/style-spec/sources/#raster-tiles)       |
-| sourceExtraParams | Other parameters accepted by MapLibre GL raster source to pass to the basemap (https://maplibre.org/maplibre-gl-js-docs/style-spec/sources/#raster) |
-| layerExtraParams  | Other parameters accepted by MapLibre GL raster layer to pass to the basemap (https://maplibre.org/maplibre-gl-js-docs/style-spec/layers/#raster)   |
+| Attribute         | Description                                                                                                                              |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| id                | The string to use for both the basemap source and layer                                                                                  |
+| tiles             | An array of one or more tile source URLs, as in the TileJSON spec (https://maplibre.org/maplibre-style-spec/sources/#raster)             |
+| sourceExtraParams | Other parameters accepted by MapLibre GL raster source to pass to the basemap (https://maplibre.org/maplibre-style-spec/sources/#raster) |
+| layerExtraParams  | Other parameters accepted by MapLibre GL raster layer to pass to the basemap (https://maplibre.org/maplibre-style-spec/sources/#raster)  |

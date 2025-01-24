@@ -2,22 +2,23 @@ name: Publish
 
 on:
   release:
-    types: [ created ]
+    types: [ published ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '20'
       - run: npm i
       - run: npm run build
       - run: |
-          git remote set-url origin https://git:${REPO_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npx gh-pages -u "github-actions-bot <support+actions@github.com>" -s "{README.md,example.html,lib/*}" -d .
-      - run: npm publish
         env:
-          REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm publish --provenance
+        env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

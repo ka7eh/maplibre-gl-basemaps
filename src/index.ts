@@ -26,11 +26,13 @@ export default class BasemapsControl implements IControl {
         switch (this._options.expandDirection || "right") {
             case "top":
                 this._container.classList.add("reverse");
+                break;
             case "down":
                 this._container.classList.add("column");
                 break;
             case "left":
                 this._container.classList.add("reverse");
+                break;
             case "right":
                 this._container.classList.add("row");
         }

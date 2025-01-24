@@ -1,9 +1,9 @@
-const fs = require("fs");
-const http = require("http");
+import fs from "fs";
+import http from "http";
 
 http.createServer(function(req, res) {
     const url = req.url === "/" ? "/example.html" : req.url;
-    fs.readFile(`${__dirname}${url}`, function(err, data) {
+    fs.readFile(`.${url}`, function(err, data) {
         if (err) {
             res.writeHead(404);
             res.end(JSON.stringify(err));
