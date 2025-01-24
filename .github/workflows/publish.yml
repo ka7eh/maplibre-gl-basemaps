@@ -20,6 +20,6 @@ jobs:
           npx gh-pages -u "github-actions-bot <support+actions@github.com>" -s "{README.md,example.html,lib/*}" -d .
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: npm publish --provenance --access public
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
